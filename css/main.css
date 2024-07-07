@@ -1,0 +1,133 @@
+
+/* Basic body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Header styling */
+h1 {
+    background: linear-gradient(45deg, #ff6f61, #ffde00);
+    color: #fff;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+h1 .fa-camera {
+    position: relative;
+    margin-left: 10px;
+    font-size: 1.2em;
+    top:20px;
+    left: 0;
+}
+
+/* Gallery container */
+#photoGallery {
+    margin: 2em auto;
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+}
+
+/* Figure styling */
+figure {
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Highlighted image styling */
+#highlighted {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Caption styling */
+#photoDescription {
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+    padding: 0 1em;
+}
+
+/* Thumbnails container */
+#thumbnailScroller {
+    overflow-x: auto;
+    padding: 1em 0;
+    white-space: nowrap;
+    max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #ff6f61 #e0e0e0; /* For Firefox */
+}
+
+/* Thumbnails list styling */
+#thumbnailList {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 1em;
+    margin: 0;
+}
+
+/* Individual thumbnail styling */
+#thumbnailList li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#thumbnailList img {
+    width: 240px;
+    height: 160px;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+/* Active thumbnail styling */
+#thumbnailList img.active-thumbnail {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation arrows styling */
+.fas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#goBack {
+    left: -40px;
+}
+
+#goForward {
+    right: -40px;
+}
